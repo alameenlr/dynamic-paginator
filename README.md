@@ -4,6 +4,7 @@
 ![Listing in a Table](https://raw.githubusercontent.com/alameenlr/dynamic-paginator/main/rmd-imgs/table.gif)
 ##### Custom Listing
 ![Custom Listing](https://raw.githubusercontent.com/alameenlr/dynamic-paginator/main/rmd-imgs/cats.gif)
+
 Dynamic Paginator, or DynamicPaginator is a vanilla JavaScript Library, no additional frameworks required. It is fast library to do pagination in your web applications. DynamicPaginator needs only *total items count*, *counts per page* and *data URL* to fetch the data, It will generate a pagination view for you. You can use custom templates, styles suitable for your Purpose.
 
 https://github.com/alameenlr/dynamic-paginator
