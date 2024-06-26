@@ -1,6 +1,6 @@
 {
   "name": "dynamic-paginator",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "It helps to load the list items dynamically with pagination.",
   "main": "lib/index.js",
   "scripts": {
