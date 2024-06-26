@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Dynamic Paginator</title>
+    <script src="../dist/dynamic-paginator.js"></script>
+</head>
+<body style="background: #2d2d2d;">
+    <div id="dynamic-paginate-elm"></div>
+    <script>
+        let dpg = null;
+        window.addEventListener('load', function() {
+            let element = document.getElementById('dynamic-paginate-elm');
+            dpg = new DynamicPaginator(element,{
+                colorTheme:"dark",
+                itemsNumber:"Sl.No.",
+                getInfoURL:"http://127.0.0.1:8000/invoices/info",
+                loadListURL:"http://127.0.0.1:8000/invoices/list",
+                httpRequestHeaders:{'X-CSRF-TOKEN': "EWhAhSaA6wFEmtOk33ZTMqn0uwuMzHWEnbxgRegO"},
+                itemProperties:[
+                    {"key":"id", "label":"Id"},
+                    {"key":"name", "label":"Name"},
+                    {"key":"emailid", "label":"Email Address"},
+                    {"key":"address", "label":"Address"},
+                    {"key":"date", "label":"Date"},
+                    {"key":"phone_number", "label":"Phone No"}
+                ],
+                indexedItemPropertiesKeys:["id","name","emailid","address","phone_number"],
+                items:[],
+                totalItemsCount:10000,
+                countsPerPage:10,
+                currentViewValues:{
+                    pageNo:1
+                },
+                paginationBlock:{
+                    jumpTo:true,
+                    template:{
+                        background:false
+                    }
+                },
+                userParamListner:false
+            });
+            element.addEventListener('page-loaded', function() {
+                console.log("page-loaded");
+            });
+            element.addEventListener('next-click', function() {
+                console.log("next-click");
+            });
+            element.addEventListener('prev-click', function() {
+                console.log("prev-click");
+            });
+            element.addEventListener('count-change', function() {
+                console.log("count-change");
+            });
+        });
+    </script>
+</body>
+</html>
