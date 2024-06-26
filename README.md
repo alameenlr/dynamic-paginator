@@ -104,6 +104,7 @@ var paginator = new DynamicPaginator('#pagination-content', {
     // colorTheme
     // getInfoURL
     // loadListURL
+    // itemsNumber
     // httpRequestHeaders
     // itemProperties
     // indexedItemPropertiesKeys
@@ -194,7 +195,8 @@ Default:`null`, URL to load the content, Response of the content must be `JSON` 
 		...
 	]
 	```
-
+ - `itemsNumber`:`false` or `any`
+`false` - disabled. `any` - Enabled, and value is the label of Number column
  - `httpRequestHeaders`:`Object{}`
 You can add custom headers to append the `POST` request(s) send by DynamicPaginator.
 Eg: `httpRequestHeaders:{'X-CSRF-TOKEN':  "EWhAhSaA6wFEmtOk33ZTMqn0uwuMzHWEnbxgRegO"}`
